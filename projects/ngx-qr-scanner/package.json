@@ -1,5 +1,5 @@
 {
-  "name": "ngx-qr-scanner",
+  "name": "@jvereecken/ngx-qr-scanner",
   "description": "Angular wrapper for the qr-scanner library",
   "author": "Jamie Vereecken",
   "version": "0.0.1",
