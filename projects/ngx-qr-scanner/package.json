@@ -1,0 +1,24 @@
+{
+  "name": "ngx-qr-scanner",
+  "description": "Angular wrapper for the qr-scanner library",
+  "author": "Jamie Vereecken",
+  "version": "0.0.1",
+  "keywords": [
+    "angular",
+    "qr",
+    "qr-scanner"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jvereecken/ngx-qr-scanner",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvereecken/ngx-qr-scanner.git"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=13.0.0",
+    "qr-scanner": "^1.4.1"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-qr-scanner": [
+        "dist/ngx-qr-scanner/ngx-qr-scanner",
+        "dist/ngx-qr-scanner"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
