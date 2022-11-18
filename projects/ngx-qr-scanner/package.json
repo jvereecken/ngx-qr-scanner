@@ -20,8 +20,5 @@
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  },
-  "publishConfig": {
-    "@jvereecken:registry": "https://npm.pkg.github.com"
   }
 }
