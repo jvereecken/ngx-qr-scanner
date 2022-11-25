@@ -4,6 +4,7 @@ import {
   ElementRef,
   EventEmitter,
   Input,
+  NgZone,
   OnChanges,
   OnDestroy,
   Output,
@@ -43,13 +44,24 @@ export class NgxQrScannerComponent implements AfterViewInit, OnDestroy, OnChange
 
   @ViewChild('videoFeed') private videoFeed?: ElementRef<HTMLVideoElement>;
 
+  constructor(private zone: NgZone) {
+  }
+
   ngAfterViewInit() {
     if (this.videoFeed) {
       this._qrScanner = new QrScanner(
         this.videoFeed.nativeElement,
-        result => this.decode.emit(result),
+        result => {
+          this.zone.run(() => {
+            this.decode.emit(result);
+          });
+        },
         {
-          onDecodeError: error => this.decodeError.emit(error),
+          onDecodeError: error => {
+            this.zone.run(() => {
+              this.decodeError.emit(error);
+            });
+          },
           preferredCamera: this.deviceId ?? this.preferredCamera,
           maxScansPerSecond: this.maxScansPerSecond,
           returnDetailedScanResult: true,
